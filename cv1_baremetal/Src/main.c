@@ -19,10 +19,11 @@ int main(void)
 	//uint8_t blink_values[32] = {1,0,1,0,1,0,0,1,1,1,0,1,1,1,0,1,1,1,0,0,1,0,1,0,1,0,0,0,0,0,0,0};
 	uint32_t blink_sequence = 0b10101001110111011100101010000000;
 	uint8_t i = 0;
+	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
+	GPIOA->MODER |= GPIO_MODER_MODER5_0;
 	while(1) {
 		// setup peripherals
-		RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
-		GPIOA->MODER |= GPIO_MODER_MODER5_0;
+
 //
 //		for (i=0;i<32;i++) {
 //			if(blink_values[i] == 1)

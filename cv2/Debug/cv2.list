@@ -142,11 +142,11 @@ void EXTI0_1_IRQHandler(void)
  8000150:	2101      	movs	r1, #1
  8000152:	430a      	orrs	r2, r1
  8000154:	615a      	str	r2, [r3, #20]
-		GPIOB->ODR ^= (1<<5);
+		GPIOB->ODR ^= (1<<0);
  8000156:	4b05      	ldr	r3, [pc, #20]	; (800016c <EXTI0_1_IRQHandler+0x30>)
  8000158:	695a      	ldr	r2, [r3, #20]
  800015a:	4b04      	ldr	r3, [pc, #16]	; (800016c <EXTI0_1_IRQHandler+0x30>)
- 800015c:	2120      	movs	r1, #32
+ 800015c:	2101      	movs	r1, #1
  800015e:	404a      	eors	r2, r1
  8000160:	615a      	str	r2, [r3, #20]
 	}
@@ -195,11 +195,11 @@ int main(void)
  80001a6:	2101      	movs	r1, #1
  80001a8:	430a      	orrs	r2, r1
  80001aa:	60da      	str	r2, [r3, #12]
-	GPIOC->PUPDR |= GPIO_PUPDR_PUPDR0_1; // S1 = PC1, pullup
+	GPIOC->PUPDR |= GPIO_PUPDR_PUPDR1_0; // S1 = PC1, pullup
  80001ac:	4b12      	ldr	r3, [pc, #72]	; (80001f8 <main+0x88>)
  80001ae:	68da      	ldr	r2, [r3, #12]
  80001b0:	4b11      	ldr	r3, [pc, #68]	; (80001f8 <main+0x88>)
- 80001b2:	2102      	movs	r1, #2
+ 80001b2:	2104      	movs	r1, #4
  80001b4:	430a      	orrs	r2, r1
  80001b6:	60da      	str	r2, [r3, #12]
 

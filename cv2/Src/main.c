@@ -45,21 +45,31 @@ void blikac(void)
 
 void tlacitka(void) {
 	static uint32_t old_s2;
+	static uint32_t old_s1;
 	static uint32_t off_time;
 	static uint32_t delay;
 
 	if (Tick > delay + BUTTON_WAIT) {
 //		GPIOB->BSRR = (1<<0);
 		uint32_t new_s2 = GPIOC->IDR & (1<<0);
+		uint32_t new_s1 = GPIOC->IDR & (1<<1);
 
 		if (old_s2 && !new_s2) { // falling edge
 			off_time = Tick + LED_TIME_SHORT;
 			GPIOB->BSRR = (1<<0);
 		}
+
+		if (old_s1 && !new_s1) { // falling edge
+			off_time = Tick + LED_TIME_LONG;
+			GPIOA->BSRR = (1<<4);
+		}
+
 		old_s2 = new_s2;
+		old_s1 = new_s1;
 
 		if (Tick > off_time) {
 			GPIOB->BRR = (1<<0);
+			GPIOA->BRR = (1<<4);
 		}
 		delay = Tick;
 	}
@@ -83,7 +93,7 @@ int main(void)
 	SysTick_Config(8000);
 
 	while(1) {
-		blikac();
+//		blikac();
 		tlacitka();
 	}
 

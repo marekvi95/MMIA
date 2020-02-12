@@ -20,13 +20,13 @@
 
 volatile uint32_t Tick = 0;
 
-void EXTI0_1_IRQHandler(void)
-{
-	if (EXTI->PR & EXTI_PR_PR0) { // check line 0 has triggered the IT
-		EXTI->PR |= EXTI_PR_PR0; // clear the pending bit
-//		GPIOB->ODR ^= (1<<0);
-	}
-}
+//void EXTI0_1_IRQHandler(void)
+//{
+//	if (EXTI->PR & EXTI_PR_PR0) { // check line 0 has triggered the IT
+//		EXTI->PR |= EXTI_PR_PR0; // clear the pending bit
+////		GPIOB->ODR ^= (1<<0);
+//	}
+//}
 
 void SysTick_Handler(void)
 {
@@ -62,9 +62,10 @@ void tlacitka(void) {
 		if (GPIOC->IDR & (1<<1))
 			debounce |= 0x0001;
 
-		if (debounce == 0x7FFF)
+		if (debounce == 0x7FFF) {
 			off_time_s1 = Tick + LED_TIME_LONG;
 			GPIOA->BSRR = (1<<4);
+		}
 
 		if (old_s2 && !new_s2) { // falling edge
 			off_time_s2 = Tick + LED_TIME_SHORT;
@@ -77,16 +78,14 @@ void tlacitka(void) {
 //		}
 
 		old_s2 = new_s2;
-		old_s1 = new_s1;
+//		old_s1 = new_s1;
 
-		if (Tick > off_time_s1) {
-//			GPIOB->BRR = (1<<0);
-			GPIOA->BRR = (1<<4);
-		}
+//		if (Tick > off_time_s1) {
+//			GPIOA->BRR = (1<<4);
+//		}
 
 		if (Tick > off_time_s2) {
 			GPIOB->BRR = (1<<0);
-//			GPIOA->BRR = (1<<4);
 		}
 
 		delay = Tick;
@@ -103,7 +102,7 @@ int main(void)
 	GPIOC->PUPDR |= GPIO_PUPDR_PUPDR1_0; // S1 = PC1, pullup
 
 	RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN; // enable clock for syscfg
-	SYSCFG->EXTICR[0] |= SYSCFG_EXTICR1_EXTI0_PC; // select PC0 for EXTI0
+//	SYSCFG->EXTICR[0] |= SYSCFG_EXTICR1_EXTI0_PC; // select PC0 for EXTI0
 	EXTI->IMR |= EXTI_IMR_MR0; // mask
 	EXTI->FTSR |= EXTI_FTSR_TR0; // trigger on falling edge
 	NVIC_EnableIRQ(EXTI0_1_IRQn); // enable EXTI0_1
@@ -111,7 +110,7 @@ int main(void)
 	SysTick_Config(8000);
 
 	while(1) {
-//		blikac();
+		blikac();
 		tlacitka();
 	}
 

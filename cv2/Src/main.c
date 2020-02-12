@@ -45,46 +45,33 @@ void blikac(void)
 
 void tlacitka(void) {
 	static uint32_t old_s2;
-	static uint32_t old_s1;
-	static uint32_t off_time_s1;
-	static uint32_t off_time_s2;
+	static uint32_t off_time;
 	static uint32_t delay;
 	static uint16_t debounce = 0xFFFF;
 	uint32_t new_s2;
-	uint32_t new_s1;
 
 	if (Tick > delay + BUTTON_WAIT) {
 
 		new_s2 = GPIOC->IDR & (1<<0);
-		new_s1 = GPIOC->IDR & (1<<1);
+
 		debounce <<= 1;
 
 		if (GPIOC->IDR & (1<<1))
 			debounce |= 0x0001;
 
 		if (debounce == 0x7FFF) {
-			off_time_s1 = Tick + LED_TIME_LONG;
-			GPIOA->BSRR = (1<<4);
-		}
-
-		if (old_s2 && !new_s2) { // falling edge
-			off_time_s2 = Tick + LED_TIME_SHORT;
+			off_time = Tick + LED_TIME_LONG;
 			GPIOB->BSRR = (1<<0);
 		}
 
-//		if (old_s1 && !new_s1) { // falling edge
-//			off_time = Tick + LED_TIME_LONG;
-//			GPIOA->BSRR = (1<<4);
-//		}
+		if (old_s2 && !new_s2) { // falling edge
+			off_time = Tick + LED_TIME_SHORT;
+			GPIOB->BSRR = (1<<0);
+		}
 
 		old_s2 = new_s2;
-//		old_s1 = new_s1;
 
-//		if (Tick > off_time_s1) {
-//			GPIOA->BRR = (1<<4);
-//		}
-
-		if (Tick > off_time_s2) {
+		if (Tick > off_time) {
 			GPIOB->BRR = (1<<0);
 		}
 

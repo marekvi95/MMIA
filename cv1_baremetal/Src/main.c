@@ -21,6 +21,7 @@ int main(void)
 	uint8_t i = 0;
 	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
 	GPIOA->MODER |= GPIO_MODER_MODER5_0;
+
 	while(1) {
 		// setup peripherals
 

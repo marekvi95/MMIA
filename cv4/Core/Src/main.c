@@ -71,7 +71,7 @@ static void MX_ADC_Init(void);
 static volatile uint32_t raw_pot;
 static volatile uint32_t raw_temp;
 static volatile uint32_t raw_volt;
-uint32_t Tick = 0;
+
 
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
@@ -137,7 +137,7 @@ int main(void)
   HAL_ADCEx_Calibration_Start(&hadc);
   HAL_ADC_Start_IT(&hadc);
 
-  static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
+
   /* USER CODE END 2 */
  
  
@@ -147,18 +147,19 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
+	  static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
+	  static uint32_t Tick = 0;
+
 	  if (HAL_GPIO_ReadPin(S1_GPIO_Port, S1_Pin) == 0) {
 		  state = SHOW_TEMP;
 		  Tick = HAL_GetTick();
-//		  HAL_Delay(50);
 	  }
 
 	  if (HAL_GPIO_ReadPin(S2_GPIO_Port, S2_Pin) == 0) {
 		  state = SHOW_VOLT;
-
 		  Tick = HAL_GetTick();
-//		  HAL_Delay(50);
 	  }
 
 	  if (Tick + DELAY < HAL_GetTick())
@@ -170,6 +171,7 @@ int main(void)
 	  	  led = raw_pot/512;
 	  	  sct_value(conv_pot, led);
 	  	  HAL_Delay(50);
+	  	  break;
 	  case SHOW_TEMP:
 		  temperature = (raw_temp - (int32_t)(*TEMP30_CAL_ADDR));
 
@@ -178,9 +180,11 @@ int main(void)
 		  temperature = temperature + 30;
 
 		  sct_value(temperature, 0);
+		  break;
 	  case SHOW_VOLT:
 		  voltage = 330 * (*VREFINT_CAL_ADDR) / raw_volt;
 		  sct_value(voltage, 0);
+		  break;
 	  default:
 		  continue;
 	  }
@@ -377,7 +381,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pins : S2_Pin S1_Pin */
   GPIO_InitStruct.Pin = S2_Pin|S1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pin : LD2_Pin */

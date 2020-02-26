@@ -78,7 +78,8 @@ int main(void)
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
-  int16_t conv_pot;
+  uint32_t conv_pot;
+  uint8_t led;
 
   /* MCU Configuration--------------------------------------------------------*/
 
@@ -114,8 +115,9 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  conv_pot = raw_pot/8;
-	  sct_value(conv_pot);
+	  conv_pot = (raw_pot*500)/4096;
+	  led = raw_pot/512;
+	  sct_value(conv_pot, led);
 	  HAL_Delay(50);
 
     /* USER CODE BEGIN 3 */

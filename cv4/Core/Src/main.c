@@ -81,7 +81,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 
 	if (channel == 0 ) {
 		raw_pot = HAL_ADC_GetValue(hadc);
-//		raw_pot = avg_pot >> ADC_Q;
+		raw_pot = avg_pot >> ADC_Q;
 		avg_pot -= raw_pot;
 		avg_pot += HAL_ADC_GetValue(hadc);
 	}

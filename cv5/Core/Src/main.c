@@ -23,7 +23,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -33,6 +34,13 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define RX_BUFFER_LEN 64
+#define CMD_BUFFER_LEN 255
+
+static uint8_t uart_rx_buf[RX_BUFFER_LEN];
+static volatile uint16_t uart_rx_read_ptr = 0;
+
+#define uart_rx_write_ptr (RX_BUFFER_LEN - hdma_usart2_rx.Instance->CNDTR)
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -42,6 +50,8 @@
 
 /* Private variables ---------------------------------------------------------*/
 UART_HandleTypeDef huart2;
+DMA_HandleTypeDef hdma_usart2_rx;
+int32_t timeout;
 
 /* USER CODE BEGIN PV */
 
@@ -50,6 +60,7 @@ UART_HandleTypeDef huart2;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
@@ -57,7 +68,51 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+int _write(int file, char const *buf, int n)
+{
+	/* stdout redirection to UART2 */
+	HAL_UART_Transmit(&huart2, (uint8_t*)(buf), n, HAL_MAX_DELAY);
+	return n;
+}
 
+static void uart_process_command(char *cmd) {
+	char cmd_buffer[CMD_BUFFER_LEN];
+	int i_data = 0;
+	int i_buffer = 0;
+	char c;
+
+	do {
+		c = cmd[i_data];
+		if ((c >= 32 && c <= 126) || c == '\0') {
+			cmd_buffer[i_buffer] = cmd[i_data];
+			i_buffer++;
+		}
+		i_data++;
+	} while(c != '\0');
+
+
+
+	printf("prijato: '%s'\n", cmd_buffer);
+}
+
+static void uart_byte_available(uint8_t c)
+{
+	static uint16_t cnt;
+	static char data[CMD_BUFFER_LEN];
+
+    if ((HAL_GetTick() - timeout) >= 2000)
+       cnt = 0;
+
+	if (cnt < CMD_BUFFER_LEN)
+		data[cnt++] = c;
+
+	if (c == '\n' || c == '\r')
+	{
+		data[cnt - 1] = '\0';
+		uart_process_command(data);
+		cnt = 0;
+	}
+}
 /* USER CODE END 0 */
 
 /**
@@ -67,10 +122,7 @@ static void MX_USART2_UART_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	uint8_t c;
 
-	HAL_UART_Receive(&huart2, &c, 1, HAL_MAX_DELAY);
-	HAL_UART_Transmit(&huart2, &c, 1, HAL_MAX_DELAY);
   /* USER CODE END 1 */
   
 
@@ -92,9 +144,10 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_UART_Receive_DMA(&huart2, uart_rx_buf, RX_BUFFER_LEN);
   /* USER CODE END 2 */
  
  
@@ -103,7 +156,15 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
+		while (uart_rx_read_ptr != uart_rx_write_ptr)
+		{
+			uint8_t b = uart_rx_buf[uart_rx_read_ptr];
+			if (++uart_rx_read_ptr >= RX_BUFFER_LEN)
+				uart_rx_read_ptr = 0; // increase read pointer
+			uart_byte_available(b); // process every received byte with the RX state machine}
+			timeout = HAL_GetTick();
+		}
+	  /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
   }
@@ -178,6 +239,22 @@ static void MX_USART2_UART_Init(void)
   /* USER CODE BEGIN USART2_Init 2 */
 
   /* USER CODE END USART2_Init 2 */
+
+}
+
+/** 
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void) 
+{
+
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Channel4_5_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel4_5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel4_5_IRQn);
 
 }
 

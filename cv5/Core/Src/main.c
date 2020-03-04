@@ -24,6 +24,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 /* USER CODE END Includes */
 
@@ -37,6 +38,10 @@
 #define RX_BUFFER_LEN 64
 #define CMD_BUFFER_LEN 255
 #define EEPROM_ADDR 0xA0
+#define EEPROM_MAXPKT 32
+#define EEPROM_WRITE 10
+#define EEPROM_TIMEOUT             5*EEPROM_WRITE  //timeout while writing
+#define EEPROM_SECTIONSIZE			64
 
 static uint8_t uart_rx_buf[RX_BUFFER_LEN];
 static volatile uint16_t uart_rx_read_ptr = 0;
@@ -132,6 +137,54 @@ static void uart_process_command(char *cmd) {
 
 	}
 
+
+	else if (strcasecmp(token, "READ") == 0) {
+		token = strtok(NULL, " ");
+		uint8_t addr = atoi(token);
+		uint8_t data_read = 0;
+
+
+		HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR,
+							addr, I2C_MEMADD_SIZE_16BIT,
+							&data_read, EEPROM_MAXPKT, EEPROM_TIMEOUT);
+
+		printf("Reading addr %x: %x \n", addr, data_read);
+
+	}
+
+	else if (strcasecmp(token, "WRITE") == 0) {
+		token = strtok(NULL, " ");
+		uint8_t addr = atoi(token);
+		token = strtok(NULL, " ");
+		uint8_t data_to_write = atoi(token);
+
+		HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDR,
+						addr, I2C_MEMADD_SIZE_16BIT,
+						&data_to_write, EEPROM_MAXPKT, EEPROM_TIMEOUT);
+
+		while (HAL_I2C_IsDeviceReady(&hi2c1, EEPROM_ADDR, 300, 1000) == HAL_TIMEOUT) {}
+
+		printf("Writing addr %x: %x \n", addr, data_to_write);
+	}
+
+	else if (strcasecmp(token, "DUMP") == 0) {
+		token = strtok(NULL, " ");
+		static uint8_t data[CMD_BUFFER_LEN];
+
+		printf("DUMP pameti \n");
+
+		uint8_t address = 0;
+
+		for(int i=0; i<0xf; i++) {
+			HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR,
+					address + i, I2C_MEMADD_SIZE_16BIT,
+					&data[i], EEPROM_MAXPKT, EEPROM_TIMEOUT);
+
+			printf("Adresa: %x Data: %x\n", address+i, data[i]);
+		}
+	}
+
+
 	else if (strcasecmp(token, "STATUS") == 0) {
 		printf("LED1: %d \n", HAL_GPIO_ReadPin(LD1_GPIO_Port, LD1_Pin));
 		printf("LED2: %d \n", HAL_GPIO_ReadPin(LED2_GPIO_Port, LED2_Pin));
@@ -195,9 +248,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_UART_Receive_DMA(&huart2, uart_rx_buf, RX_BUFFER_LEN);
 
-  HAL_I2C_Mem_Read();
-  HAL_I2C_Mem_Write();
-  HAL_I2C_IsDeviceReady();
+
 
   /* USER CODE END 2 */
  

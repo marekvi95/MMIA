@@ -108,7 +108,7 @@ int main(void)
 	  OWConvertAll();
 	  HAL_Delay(CONVERT_T_DELAY);
 	  OWReadTemperature(&temp_18b20);
-	  sct_value(round_closest((uint16_t)temp_18b20, 10), 0); // round value to nearest integer and divide it by zero, let's assume that temperature won't drop below zero degrees.
+	  sct_value(round_value((uint16_t)temp_18b20), 0);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -314,3 +314,54 @@ Finished building: cv6.bin
 Finished building: cv6.list
  
  
+14:42:14 **** Incremental Build of configuration Debug for project cv6 ****
+make -j8 all 
+arm-none-eabi-size   cv6.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8820	     20	   1700	  10540	   292c	cv6.elf
+Finished building: default.size.stdout
+ 
+16:21:51 **** Incremental Build of configuration Debug for project cv6 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F030x8 -DDEBUG -c -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F030x8 -DDEBUG -c -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:111:14: warning: implicit declaration of function 'round_value'; did you mean 'sct_value'? [-Wimplicit-function-declaration]
+    sct_value(round_value((uint16_t)temp_18b20), 0); // round value to nearest integer and divide it by zero, let's assume that temperature won't drop below zero degrees.
+              ^~~~~~~~~~~
+              sct_value
+arm-none-eabi-gcc -o "cv6.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\nxf46245\Documents\MMIA\cv6\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Core/Src/main.o: In function `main':
+C:/Users/nxf46245/Documents/MMIA/cv6/Debug/../Core/Src/main.c:111: undefined reference to `round_value'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:44: cv6.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:22:07 **** Incremental Build of configuration Debug for project cv6 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F030x8 -DDEBUG -c -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:111:14: error: too few arguments to function 'round_closest'
+    sct_value(round_closest((uint16_t)temp_18b20), 0); // round value to nearest integer and divide it by zero, let's assume that temperature won't drop below zero degrees.
+              ^~~~~~~~~~~~~
+../Core/Src/main.c:63:10: note: declared here
+ uint16_t round_closest(uint16_t dividend, uint16_t divisor)
+          ^~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:41: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:23:28 **** Incremental Build of configuration Debug for project cv6 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F030x8 -DDEBUG -c -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cv6.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\nxf46245\Documents\MMIA\cv6\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cv6.elf
+ 
+arm-none-eabi-objdump -h -S  cv6.elf  > "cv6.list"
+arm-none-eabi-objcopy  -O binary  cv6.elf  "cv6.bin"
+arm-none-eabi-size   cv6.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9356	     20	   1700	  11076	   2b44	cv6.elf
+Finished building: default.size.stdout
+ 
+Finished building: cv6.bin
+Finished building: cv6.list
+ 
+ 

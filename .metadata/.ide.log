@@ -952,3 +952,475 @@
 2020-03-17 14:46:02,237 [INFO] ProjectBuilder:2894 - Time for Generating toolchain IDE Files: 2397mS.
 2020-03-17 14:46:02,240 [INFO] ProjectBuilder:1878 - Time for Copy CMSIS : 2mS.
 2020-03-17 14:46:02,245 [INFO] ProjectBuilder:1878 - Time for Copy CMSIS : 1mS.
+2020-03-23 15:50:36,154 [INFO] MainUpdater:2230 - connection check result : 10
+2020-03-23 15:50:36,288 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Successfull proxy connection.
+2020-03-23 15:50:36,593 [INFO] McuFinderGlobals:40 - Set McuFinder mode to 2 (CubeIDE integrated)
+2020-03-23 15:50:36,631 [INFO] FinderPluginLoader:86 - Searching for filters in installed packs
+2020-03-23 15:50:38,223 [INFO] LoadUrlFilesThread:161 - End of LoadServerUrlFiles without Thread
+2020-03-23 15:50:38,233 [INFO] McuDetailPanel:181 - Set advertising image to C:/Users/nxf46245/STM32Cube/Repository/\STM32L4_MCUs_N4239S_big.jpg
+2020-03-23 15:50:39,037 [INFO] McuFilterPanel:249 - Update 0 favorites MCUs
+2020-03-23 15:50:40,220 [INFO] LoadUrlFilesThread:161 - End of LoadServerUrlFiles without Thread
+2020-03-23 15:50:40,220 [INFO] BoardDetailPanel:180 - Set advertising image to C:/Users/nxf46245/STM32Cube/Repository/\STM32L4_MCUs_N4239S_big.jpg
+2020-03-23 15:50:40,258 [INFO] BoardFilterPanel:211 - Update 1 favorites Boards
+2020-03-23 15:50:40,456 [INFO] CrossSelectorPresenter:1319 - Cross Selector saved comparison directory: C:\Users\nxf46245\.stmcufinder\plugins\mcufinder\mcu\cs_comparisons_mx
+2020-03-23 16:00:51,784 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] withoutVersionV1.11.0
+2020-03-23 16:00:58,485 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] File copied successfully!!
+2020-03-23 16:00:58,895 [INFO] MainUpdater:2230 - connection check result : 10
+2020-03-23 16:00:59,042 [INFO] MicroXplorer:390 - Change Database Path : 
+2020-03-23 16:00:59,043 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.60
+2020-03-23 16:00:59,057 [INFO] PinOutPanel:1420 - setPackage(No Configuration,No Configuration)
+2020-03-23 16:00:59,068 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 485507640 Bytes (1073741824)
+2020-03-23 16:00:59,069 [INFO] OpenFileManager:274 - Change cursor
+2020-03-23 16:00:59,125 [INFO] RulesReader:52 - Compatibility file has been processed (208 Rules)
+2020-03-23 16:01:00,780 [INFO] Rule:211 - rule SPDIFRX instance for mcu is applicable
+2020-03-23 16:01:00,780 [INFO] Rule:211 - rule Rename Tracer Mode is applicable
+2020-03-23 16:01:00,780 [INFO] Rule:211 - rule SPDIFRX instance value for IP SPDIFRX is applicable
+2020-03-23 16:01:00,780 [INFO] Rule:211 - rule SPDIFRX instance for signal is applicable
+2020-03-23 16:01:00,781 [INFO] Rule:211 - rule SPDIFRX instance for project manager is applicable
+2020-03-23 16:01:00,781 [INFO] Rule:211 - rule SPDIFRX instance for project manager is applicable
+2020-03-23 16:01:00,781 [INFO] Rule:211 - rule ADC Scan  fix with FW F7 is applicable
+2020-03-23 16:01:00,781 [INFO] Rule:211 - rule ADC Scan  fix with FW F7 is applicable
+2020-03-23 16:01:00,781 [INFO] Rule:211 - rule Rename Comp Signal is applicable
+2020-03-23 16:01:00,782 [INFO] Rule:211 - rule DMA-DAC mode for DIE422 is applicable
+2020-03-23 16:01:00,782 [INFO] Rule:211 - rule DMA-DAC mode for DIE438 is applicable
+2020-03-23 16:01:00,783 [INFO] Rule:211 - rule DMA-DAC mode for DIE432 or DIE446 is applicable
+2020-03-23 16:01:00,783 [INFO] Rule:211 - rule DFSDM instance value for IP DFSDM is applicable
+2020-03-23 16:01:00,783 [INFO] Rule:211 - rule DFSDM instance for mcu is applicable
+2020-03-23 16:01:00,783 [INFO] Rule:211 - rule DFSDM instance for VP is applicable
+2020-03-23 16:01:00,783 [INFO] Rule:211 - rule DFSDM instance for signal is applicable
+2020-03-23 16:01:00,783 [INFO] Rule:211 - rule DFSDM instance for shared is applicable
+2020-03-23 16:01:00,783 [INFO] Rule:211 - rule BreakInputSource parameter for IP Timer is applicable
+2020-03-23 16:01:00,783 [INFO] Rule:211 - rule Sourcebreak parameter for IP Timer is applicable
+2020-03-23 16:01:00,784 [INFO] Rule:211 - rule Sourcebreak parameter for IP Timer is applicable
+2020-03-23 16:01:00,784 [INFO] Rule:211 - rule DFSDM for PCC is applicable
+2020-03-23 16:01:00,784 [INFO] Rule:211 - rule Serial_Wire Mode is applicable
+2020-03-23 16:01:00,784 [INFO] Rule:211 - rule JTAG_4_pins Mode is applicable
+2020-03-23 16:01:00,784 [INFO] Rule:211 - rule JTAG_5_pins Mode is applicable
+2020-03-23 16:01:00,784 [INFO] Rule:211 - rule Trace_Asynchronous_SW Mode is applicable
+2020-03-23 16:01:00,785 [INFO] Rule:211 - rule Trace_Synchro_1bit_JTAG Mode is applicable
+2020-03-23 16:01:00,785 [INFO] Rule:211 - rule Trace_Synchro_2bits_JTAG Mode is applicable
+2020-03-23 16:01:00,785 [INFO] Rule:211 - rule Trace_Synchro_4bits_JTAG Mode is applicable
+2020-03-23 16:01:00,785 [INFO] Rule:211 - rule Trace_Synchro_1bit_SW Mode is applicable
+2020-03-23 16:01:00,785 [INFO] Rule:211 - rule Trace_Synchro_2bits_SW Mode is applicable
+2020-03-23 16:01:00,785 [INFO] Rule:211 - rule Trace_Synchro_4bits_SW Mode is applicable
+2020-03-23 16:01:00,785 [INFO] Rule:211 - rule SYS_WakeUp0 Mode is applicable
+2020-03-23 16:01:00,785 [INFO] Rule:211 - rule SYS_WakeUp0 Mode for STM32F446 is applicable
+2020-03-23 16:01:00,786 [INFO] Rule:211 - rule SYS_WakeUp1 Mode is applicable
+2020-03-23 16:01:00,786 [INFO] Rule:211 - rule SYS_WakeUp1 Mode for STM32F446 is applicable
+2020-03-23 16:01:00,786 [INFO] Rule:211 - rule SYS_WakeUp2 Mode is applicable
+2020-03-23 16:01:00,786 [INFO] Rule:211 - rule SYS_WakeUp3 Mode is applicable
+2020-03-23 16:01:00,786 [INFO] Rule:211 - rule SYS_WakeUp4 Mode is applicable
+2020-03-23 16:01:00,786 [INFO] Rule:211 - rule SYS_WakeUp5 Mode is applicable
+2020-03-23 16:01:00,786 [INFO] Rule:211 - rule SYS_WakeUp6 Mode is applicable
+2020-03-23 16:01:00,786 [INFO] Rule:211 - rule SYS_WakeUp7 Mode is applicable
+2020-03-23 16:01:00,786 [INFO] Rule:211 - rule Mode_PVD_Ext is applicable
+2020-03-23 16:01:00,787 [INFO] Rule:211 - rule Mode_PVD_Int is applicable
+2020-03-23 16:01:00,788 [INFO] Rule:211 - rule Add RTC Activate Clock Source is applicable
+2020-03-23 16:01:00,788 [INFO] Rule:211 - rule Add RTC Activate Calendar 1 is applicable
+2020-03-23 16:01:00,788 [INFO] Rule:211 - rule Add RTC Activate Calendar 2 is applicable
+2020-03-23 16:01:00,788 [INFO] Rule:211 - rule Add RTC Activate Calendar 3 is applicable
+2020-03-23 16:01:00,788 [INFO] Rule:211 - rule UART/USART TX Mode is applicable
+2020-03-23 16:01:00,788 [INFO] Rule:211 - rule UART/USART RX Mode is applicable
+2020-03-23 16:01:00,789 [INFO] Rule:211 - rule UART/USART RX TX Mode is applicable
+2020-03-23 16:01:00,789 [INFO] Rule:211 - rule UART/USART PARITY NONE is applicable
+2020-03-23 16:01:00,789 [INFO] Rule:211 - rule UART/USART PARITY EVEN is applicable
+2020-03-23 16:01:00,789 [INFO] Rule:211 - rule UART/USART PARITY ODD is applicable
+2020-03-23 16:01:00,789 [INFO] Rule:211 - rule USART StopBits 1 is applicable
+2020-03-23 16:01:00,789 [INFO] Rule:211 - rule USART StopBits 2 is applicable
+2020-03-23 16:01:00,789 [INFO] Rule:211 - rule USART StopBits 1.5 is applicable
+2020-03-23 16:01:00,790 [INFO] Rule:211 - rule USART StopBits 0.5 is applicable
+2020-03-23 16:01:00,790 [INFO] Rule:211 - rule UART/USART WORD LENGTH 7 is applicable
+2020-03-23 16:01:00,790 [INFO] Rule:211 - rule UART/USART WORD LENGTH 8 is applicable
+2020-03-23 16:01:00,790 [INFO] Rule:211 - rule UART/USART WORD LENGTH 9 is applicable
+2020-03-23 16:01:00,790 [INFO] Rule:211 - rule Rename FMC NAND NCE signal is applicable
+2020-03-23 16:01:00,790 [INFO] Rule:211 - rule Rename FMC NAND INT signal is applicable
+2020-03-23 16:01:00,790 [INFO] Rule:211 - rule Change Default Value for ADC ExternalTrigConv L4 family is applicable
+2020-03-23 16:01:00,790 [INFO] Rule:211 - rule Change Default Value for ADC ExternalTrigInjecConv L4 family is applicable
+2020-03-23 16:01:00,790 [INFO] Rule:211 - rule Change Default Value for ADC ExternalTrigConv F3 family is applicable
+2020-03-23 16:01:00,791 [INFO] Rule:211 - rule Change Default Value for ADC ExternalTrigInjecConv F3 family is applicable
+2020-03-23 16:01:00,791 [INFO] Rule:211 - rule Change Default Value for ADC ExternalTrigConv Goldfish serie is applicable
+2020-03-23 16:01:00,791 [INFO] Rule:211 - rule Change Default Value for ADC ExternalTrigInjecConv Goldfish serie is applicable
+2020-03-23 16:01:00,791 [INFO] Rule:211 - rule Change Default Value for ADC ExternalTrigConv L0 family is applicable
+2020-03-23 16:01:00,791 [INFO] Rule:211 - rule Change Default Value for ADC ExternalTrigConv F0 family is applicable
+2020-03-23 16:01:00,791 [INFO] Rule:211 - rule Change Default Value for ADC ExternalTrigConvn L1 family is applicable
+2020-03-23 16:01:00,791 [INFO] Rule:211 - rule Change Default Value for ADC ExternalTrigInjecConv L1 family is applicable
+2020-03-23 16:01:00,792 [INFO] Rule:211 - rule Change Default Value for ADC ExternalTrigConv F1 family is applicable
+2020-03-23 16:01:00,792 [INFO] Rule:211 - rule Change Default Value for ADC ExternalTrigInjecConv F1 family is applicable
+2020-03-23 16:01:00,792 [INFO] Rule:211 - rule Change Default Value for ADC ExternalTrigConv F7 family is applicable
+2020-03-23 16:01:00,792 [INFO] Rule:211 - rule Change Default Value for ADC ExternalTrigInjecConv F7 family is applicable
+2020-03-23 16:01:00,792 [INFO] Rule:211 - rule Change Default Value for ADC ExternalTrigConv F4 and F2 family is applicable
+2020-03-23 16:01:00,792 [INFO] Rule:211 - rule Change Default Value for ADC ExternalTrigInjecConv F4 and F2 family is applicable
+2020-03-23 16:01:00,792 [INFO] Rule:211 - rule ADC SamplingTime fix with FW L0  is applicable
+2020-03-23 16:01:00,792 [INFO] Rule:211 - rule ADC SamplingTime fix with FW L0  is applicable
+2020-03-23 16:01:00,792 [INFO] Rule:211 - rule ADC SamplingTime fix with FW L0 is applicable
+2020-03-23 16:01:00,792 [INFO] Rule:211 - rule ADC SamplingTime fix with FW L0 is applicable
+2020-03-23 16:01:00,793 [INFO] Rule:211 - rule ADC SamplingTime fix with FW L0  is applicable
+2020-03-23 16:01:00,793 [INFO] Rule:211 - rule ADC SamplingTime fix with FW L0 is applicable
+2020-03-23 16:01:00,793 [INFO] Rule:211 - rule Rename USB_OE Signal is applicable
+2020-03-23 16:01:00,793 [INFO] Rule:211 - rule Rename Activate_OE Mode is applicable
+2020-03-23 16:01:00,793 [INFO] Rule:211 - rule Rename DIE462/DIE415 pin PC14/OSC32_IN -> PC14-OSC32_IN (PC14) is applicable
+2020-03-23 16:01:00,793 [INFO] Rule:211 - rule Rename DIE462/DIE415 pin PC15/OSC32_OUT -> PC15-OSC32_OUT (PC15) is applicable
+2020-03-23 16:01:00,793 [INFO] Rule:211 - rule Rename DIE462/DIE415 pin PH0/OSC_IN -> PH0-OSC_IN (PH0) is applicable
+2020-03-23 16:01:00,793 [INFO] Rule:211 - rule Rename DIE462/DIE415 pin PH1/OSC_OUT -> PH1-OSC_OUT (PH1) is applicable
+2020-03-23 16:01:00,793 [INFO] Rule:211 - rule Rename DIE462 pin PA13 -> PA13 (JTMS/SWDIO) is applicable
+2020-03-23 16:01:00,793 [INFO] Rule:211 - rule Rename DIE415 pin PA13 -> PA13 (JTMS/SWDIO) is applicable
+2020-03-23 16:01:00,793 [INFO] Rule:211 - rule Rename DIE462 pin PA14 -> PA14 (JTCK/SWCLK) is applicable
+2020-03-23 16:01:00,793 [INFO] Rule:211 - rule Rename DIE415 pin PA14 -> PA14 (JTCK/SWCLK) is applicable
+2020-03-23 16:01:00,794 [INFO] Rule:211 - rule Rename DIE462/DIE415 pin PA15 -> PA15 (JTDI) is applicable
+2020-03-23 16:01:00,794 [INFO] Rule:211 - rule Rename DIE462 pin PB3 -> PB3 (JTD0/TRACESWO) is applicable
+2020-03-23 16:01:00,794 [INFO] Rule:211 - rule Rename DIE415 pin PB3 -> PB3 (JTD0-TRACESWO) is applicable
+2020-03-23 16:01:00,794 [INFO] Rule:211 - rule Rename DIE462/DIE415 pin PB4 -> PB4 (NJTRST) is applicable
+2020-03-23 16:01:00,794 [INFO] Rule:211 - rule Rename DIE462 pin PH3/BOOT0 -> PH3-BOOT0 (BOOT0) is applicable
+2020-03-23 16:01:00,794 [INFO] Rule:211 - rule Rename CRYP DataEncryptionTypesList to Algorithm is applicable
+2020-03-23 16:01:00,795 [INFO] Rule:211 - rule Rename AES DataEncryptionTypesList to Algorithm is applicable
+2020-03-23 16:01:00,795 [INFO] Rule:211 - rule Rename TDESECB to CRYP_TDES_ECB is applicable
+2020-03-23 16:01:00,795 [INFO] Rule:211 - rule Rename TDESCBC to CRYP_TDES_CBC is applicable
+2020-03-23 16:01:00,795 [INFO] Rule:211 - rule Rename DESECB to CRYP_DES_ECB is applicable
+2020-03-23 16:01:00,795 [INFO] Rule:211 - rule Rename DESCBC to CRYP_DES_CBC is applicable
+2020-03-23 16:01:00,795 [INFO] Rule:211 - rule Rename AESECB to CRYP_AES_ECB is applicable
+2020-03-23 16:01:00,795 [INFO] Rule:211 - rule Rename AESCBC to CRYP_AES_CBC is applicable
+2020-03-23 16:01:00,795 [INFO] Rule:211 - rule Rename AESCTR to CRYP_AES_CTR is applicable
+2020-03-23 16:01:00,795 [INFO] Rule:211 - rule Rename AESGCM to CRYP_AES_GCM is applicable
+2020-03-23 16:01:00,796 [INFO] Rule:211 - rule Rename AESCCM to CRYP_AES_CCM is applicable
+2020-03-23 16:01:00,796 [INFO] Rule:211 - rule Rename CAN TimeSeg1 to BS1 is applicable
+2020-03-23 16:01:00,796 [INFO] Rule:211 - rule Rename CAN TimeSeg2 to BS2 is applicable
+2020-03-23 16:01:00,796 [INFO] Rule:211 - rule Rename CAN SyncJumpWidth to SJW is applicable
+2020-03-23 16:01:00,796 [INFO] Rule:211 - rule TimeTriggeredMode to TTCM is applicable
+2020-03-23 16:01:00,796 [INFO] Rule:211 - rule Rename CAN AutoBusOff to ABOM is applicable
+2020-03-23 16:01:00,796 [INFO] Rule:211 - rule Rename CAN AutoWakeUp to AWUM is applicable
+2020-03-23 16:01:00,796 [INFO] Rule:211 - rule Rename CAN AutoRetransmission to NART is applicable
+2020-03-23 16:01:00,797 [INFO] Rule:211 - rule Rename CAN ReceiveFifoLocked to RFLM is applicable
+2020-03-23 16:01:00,797 [INFO] Rule:211 - rule Rename CAN TransmitFifoPriority to TXFP is applicable
+2020-03-23 16:01:00,797 [INFO] Rule:211 - rule Rename HRTIMER HRTIM_OUTPUTFAULTLEVEL_HIGH in HRTIMER HRTIM_OUTPUTFAULTLEVEL_HIGHZ is applicable
+2020-03-23 16:01:00,797 [INFO] Rule:211 - rule Rename TIMER TIM_CLEARINPUTSOURCE_OCREFCLR in  TIMER TIM_CLEARINPUTSOURCE_NONE for F7 family is applicable
+2020-03-23 16:01:00,797 [INFO] Rule:211 - rule FDCAN_R1 - Rename FDCAN mode Master into Classic is applicable
+2020-03-23 16:01:00,798 [INFO] Rule:211 - rule FDCAN_R2 - Rename FDCAN mode Slave into Classic is applicable
+2020-03-23 16:01:00,798 [INFO] Rule:211 - rule FDCAN1_R3 - if PA10.Mode=FullDuplex, add Pin PA12 is applicable
+2020-03-23 16:01:00,798 [INFO] Rule:211 - rule FDCAN1_R3 - if PA9.Mode=FullDuplex, add Pin PA11 is applicable
+2020-03-23 16:01:00,798 [INFO] Rule:211 - rule FDCAN1_R3 - Alternatepin_1 - if PE1.Mode=FullDuplex, add Pin PB9 is applicable
+2020-03-23 16:01:00,798 [INFO] Rule:211 - rule FDCAN1_R3 - Alternatepin_1 - if PE0.Mode=FullDuplex, add Pin PB8 is applicable
+2020-03-23 16:01:00,799 [INFO] Rule:211 - rule FDCAN1_R3 - Alternatepin_2 - if PD5.Mode=FullDuplex, add Pin PD1 is applicable
+2020-03-23 16:01:00,799 [INFO] Rule:211 - rule FDCAN1_R3 - Alternatepin_2 - if PD4.Mode=FullDuplex, add Pin PD0 is applicable
+2020-03-23 16:01:00,799 [INFO] Rule:211 - rule FDCAN1_R4 - Rename Mode FullDuplex into Enable FDCAN_TXFD for pin PA10 is applicable
+2020-03-23 16:01:00,799 [INFO] Rule:211 - rule FDCAN1_R4 - Rename Mode FullDuplex into Enable FDCAN_TXFD for pin PA9 is applicable
+2020-03-23 16:01:00,799 [INFO] Rule:211 - rule FDCAN1_R4 - Alternatepin_1 - Rename Mode FullDuplex into Enable FDCAN_TXFD for pin PE1 is applicable
+2020-03-23 16:01:00,800 [INFO] Rule:211 - rule FDCAN1_R4 - Alternatepin_1 - Rename Mode FullDuplex into Enable FDCAN_TXFD for pin PE0 is applicable
+2020-03-23 16:01:00,800 [INFO] Rule:211 - rule FDCAN1_R4 - Alternatepin_2 - Rename Mode FullDuplex into Enable FDCAN_TXFD for pin PD5 is applicable
+2020-03-23 16:01:00,801 [INFO] Rule:211 - rule FDCAN1_R4 - Alternatepin_2 - Rename Mode FullDuplex into Enable FDCAN_TXFD for pin PD4 is applicable
+2020-03-23 16:01:00,801 [INFO] Rule:211 - rule FDCAN2_R3 - if PD10.Mode=FullDuplex, add Pin PB13 is applicable
+2020-03-23 16:01:00,801 [INFO] Rule:211 - rule FDCAN2_R3 - if PD9.Mode=FullDuplex, add Pin PB12 is applicable
+2020-03-23 16:01:00,801 [INFO] Rule:211 - rule FDCAN2_R3 - Alternatepin_1 - if PB7.Mode=FullDuplex, add Pin PB6 is applicable
+2020-03-23 16:01:00,801 [INFO] Rule:211 - rule FDCAN2_R3 - Alternatepin_1 - if PD9.Mode=FullDuplex, add Pin PB12 is applicable
+2020-03-23 16:01:00,802 [INFO] Rule:211 - rule FDCAN2_R4 - Rename Mode FullDuplex into Enable FDCAN_TXFD for pin PD10 is applicable
+2020-03-23 16:01:00,802 [INFO] Rule:211 - rule FDCAN2_R4 - Rename Mode FullDuplex into Enable FDCAN_TXFD for pin PD9 is applicable
+2020-03-23 16:01:00,802 [INFO] Rule:211 - rule FDCAN2_R4 - Alternatepin_1 - Rename Mode FullDuplex into Enable FDCAN_TXFD for pin PB7 is applicable
+2020-03-23 16:01:00,802 [INFO] Rule:211 - rule FDCAN2_R4 - Alternatepin_1 - Rename Mode FullDuplex into Enable FDCAN_TXFD for pin PD6 is applicable
+2020-03-23 16:01:00,802 [INFO] Rule:211 - rule USART TxPinLevelInvertParam Mode is applicable
+2020-03-23 16:01:00,802 [INFO] Rule:211 - rule USART RxPinLevelInvertParam Mode is applicable
+2020-03-23 16:01:00,802 [INFO] Rule:211 - rule USART DataInvertParam Mode is applicable
+2020-03-23 16:01:00,802 [INFO] Rule:211 - rule USART SwapParam Mode is applicable
+2020-03-23 16:01:00,803 [INFO] Rule:211 - rule USART OverrunDisableParam Mode is applicable
+2020-03-23 16:01:00,803 [INFO] Rule:211 - rule USART DMADisableonRxErrorParam Mode is applicable
+2020-03-23 16:01:00,803 [INFO] Rule:211 - rule USART MSBFirstParam Mode is applicable
+2020-03-23 16:01:00,803 [INFO] Rule:211 - rule Update MwName for USB_DEVICE is applicable
+2020-03-23 16:01:00,803 [INFO] Rule:211 - rule Change PWR_Regulator_Voltage_Scale Default Value for RCC  H7 family is applicable
+2020-03-23 16:01:00,803 [INFO] Rule:211 - rule UART/USART IPParameter rename Prescaler parameter to ClockPrescaler is applicable
+2020-03-23 16:01:00,803 [INFO] Rule:211 - rule UART/USART Prescaler rename Prescaler parameter to ClockPrescaler is applicable
+2020-03-23 16:01:00,804 [INFO] Rule:211 - rule TIM1CLockSelection is applicable
+2020-03-23 16:01:00,804 [INFO] Rule:211 - rule TIM15CLockSelection is applicable
+2020-03-23 16:01:00,804 [INFO] Rule:211 - rule align RCC SDMMC3CLockSelection default value on MP1 is applicable
+2020-03-23 16:01:00,804 [INFO] Rule:211 - rule align RCC SDMMC12CLockSelection default value on MP1 is applicable
+2020-03-23 16:01:00,804 [INFO] Rule:211 - rule align RCC QSPICLockSelection default value on MP1 is applicable
+2020-03-23 16:01:00,804 [INFO] Rule:211 - rule align RCC QSPICLockSelection default value on MP1 is applicable
+2020-03-23 16:01:00,805 [INFO] Rule:211 - rule align RCC SPI6CLockSelection default value on MP1 is applicable
+2020-03-23 16:01:00,805 [INFO] Rule:211 - rule align RCC LPTIM23CLockSelection default value on MP1 is applicable
+2020-03-23 16:01:00,805 [INFO] Rule:211 - rule align RCC LPTIM1CLockSelection default value on MP1 is applicable
+2020-03-23 16:01:00,805 [INFO] Rule:211 - rule align RCC USART1CLockSelection default value on MP1 is applicable
+2020-03-23 16:01:00,805 [INFO] Rule:211 - rule align RCC USART24CLockSelection default value on MP1 is applicable
+2020-03-23 16:01:00,805 [INFO] Rule:211 - rule align RCC USART6CLockSelection default value on MP1 is applicable
+2020-03-23 16:01:00,805 [INFO] Rule:211 - rule align RCC UART78CLockSelection default value on MP1 is applicable
+2020-03-23 16:01:00,805 [INFO] Rule:211 - rule align RCC USART35CLockSelection default value on MP1 is applicable
+2020-03-23 16:01:00,806 [INFO] Rule:211 - rule align RCC SPI45CLockSelection default value on MP1 is applicable
+2020-03-23 16:01:00,806 [INFO] Rule:211 - rule align RCC I2C46CLockSelection BCLK value on MP1 is applicable
+2020-03-23 16:01:00,806 [INFO] Rule:211 - rule align RCC SPI45CLockSelection default value on MP1 is applicable
+2020-03-23 16:01:00,806 [INFO] Rule:211 - rule align RCC I2C12CLockSelection default value on MP1 is applicable
+2020-03-23 16:01:00,806 [INFO] Rule:211 - rule align RCC I2C35CLockSelection default value on MP1 is applicable
+2020-03-23 16:01:00,806 [INFO] Rule:211 - rule align RCC LPTIM45CLockSelection default value on MP1 is applicable
+2020-03-23 16:01:00,806 [INFO] Rule:211 - rule Rename DCMI PIXCK signal is applicable
+2020-03-23 16:01:00,806 [INFO] Rule:211 - rule Change Default Value for I2C46CLockSelection MP1 family is applicable
+2020-03-23 16:01:00,807 [INFO] Rule:211 - rule Change Default Value for UART for G4, G0 and WB families is applicable
+2020-03-23 16:01:00,807 [INFO] Rule:211 - rule Change Default Value for USART for G4, G0 and WB families is applicable
+2020-03-23 16:01:00,807 [INFO] Rule:211 - rule Change Default Value for USART for G4 family is applicable
+2020-03-23 16:01:00,807 [INFO] Rule:211 - rule Change USART1CLockSelection refparam name for MP1 is applicable
+2020-03-23 16:01:00,807 [INFO] Rule:211 - rule Change USART2CLockSelection refparam name for MP1 is applicable
+2020-03-23 16:01:00,807 [INFO] Rule:211 - rule Change USART3CLockSelection refparam name for MP1 is applicable
+2020-03-23 16:01:00,807 [INFO] Rule:211 - rule Change UART4CLockSelection refparam name for MP1 is applicable
+2020-03-23 16:01:00,807 [INFO] Rule:211 - rule Change UART5CLockSelection refparam name for MP1 is applicable
+2020-03-23 16:01:00,807 [INFO] Rule:211 - rule Change LPUART1CLockSelection refparam name for MP1 is applicable
+2020-03-23 16:01:00,808 [INFO] Rule:211 - rule Change LPTIM1CLockSelection refparam name for MP1 is applicable
+2020-03-23 16:01:00,808 [INFO] Rule:211 - rule Change LPTIM2CLockSelection refparam name for MP1 is applicable
+2020-03-23 16:01:00,808 [INFO] Rule:211 - rule Change RCC_MCO1Source refparam name for MP1 is applicable
+2020-03-23 16:01:00,808 [INFO] Rule:211 - rule Change LSCOSource1 refparam name for MP1 is applicable
+2020-03-23 16:01:00,808 [INFO] Rule:211 - rule Change SMPSCLockSelection refparam name for MP1 is applicable
+2020-03-23 16:01:00,809 [INFO] Rule:211 - rule Change LPTIM3CLockSelection refparam name for MP1 is applicable
+2020-03-23 16:01:00,809 [INFO] Rule:211 - rule Change MPCBB* Default Template Mode to Parameters is applicable
+2020-03-23 16:01:00,809 [INFO] Rule:211 - rule Change MPCWM* or MPCBB* Secure Mode to Parameters is applicable
+2020-03-23 16:01:00,809 [INFO] Rule:211 - rule Change MPCWM* or MPCBB* No Secure Mode to Parameters is applicable
+2020-03-23 16:01:00,809 [INFO] Rule:211 - rule Change TZSC IP Secure Mode to Parameters is applicable
+2020-03-23 16:01:00,809 [INFO] Rule:211 - rule Change TZSC IP No Secure Mode to Parameters is applicable
+2020-03-23 16:01:00,809 [INFO] Rule:211 - rule Change TZSC IP Privilege Mode to Parameters is applicable
+2020-03-23 16:01:00,809 [INFO] Rule:211 - rule Change TZSC IP No Privilege Mode to Parameters is applicable
+2020-03-23 16:01:00,809 [INFO] Rule:211 - rule Change TZIC IT Secure Mode to Parameters is applicable
+2020-03-23 16:01:00,809 [INFO] Rule:211 - rule Change TZIC IT No Secure Mode to Parameters is applicable
+2020-03-23 16:01:00,809 [INFO] Rule:211 - rule Add MPCBB1_NonSecureArea_Start_Address value with referenced to MPCBB1_NonSecureArea_Start value is applicable
+2020-03-23 16:01:00,810 [INFO] Rule:211 - rule Add MPCBB2_NonSecureArea_Start_Address value with referenced to MPCBB2_NonSecureArea_Start value is applicable
+2020-03-23 16:01:00,810 [INFO] Rule:211 - rule Add MPCWM1_NonSecureArea*_Start_Address value with referenced to MPCWM1_NonSecureArea*_Start value is applicable
+2020-03-23 16:01:00,810 [INFO] Rule:211 - rule Add MPCWM2_NonSecureArea*_Start_Address value with referenced to MPCWM2_NonSecureArea*_Start value is applicable
+2020-03-23 16:01:00,810 [INFO] Rule:211 - rule Add MPCWM3_NonSecureArea_Start_Address value with referenced to MPCWM3_NonSecureArea_Start value is applicable
+2020-03-23 16:01:00,810 [INFO] Rule:211 - rule Change Default Value for PLL1UserDefinedConfig is applicable
+2020-03-23 16:01:00,810 [INFO] Rule:211 - rule Change GPIO_PuPd Default Value for USART in async mode is applicable
+2020-03-23 16:01:00,810 [INFO] Rule:211 - rule Change SMPSDivider Default Value is applicable
+2020-03-23 16:01:00,842 [INFO] DbConfProperties:294 - Apply Compatibility (66/208 Rules)
+2020-03-23 16:01:00,883 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) Unable to find key (Mcu.ThirdPartyNb) in loaded IOC file
+2020-03-23 16:01:00,909 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2020-03-23 16:01:01,225 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 671333512 Bytes (1073741824)
+2020-03-23 16:01:01,249 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1583414542924]
+2020-03-23 16:01:01,250 [INFO] ThirdPartyModel:521 - Component with status : MCU_INCOMPATIBLE for condition : OS Tick GTIM id : 1583414542251
+2020-03-23 16:01:01,252 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1583414545500, 1583414543007]
+2020-03-23 16:01:01,377 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 5.0.0
+2020-03-23 16:01:01,378 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 1.1.0
+2020-03-23 16:01:01,378 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 4.1.0
+2020-03-23 16:01:01,378 [INFO] ThirdParty:899 - CMSIS Pack Vendor :ARM CMSIS 5.6.0
+2020-03-23 16:01:01,378 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.5.2
+2020-03-23 16:01:01,379 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 7.1.0
+2020-03-23 16:01:01,379 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2020-03-23 16:01:01,379 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 1.0.0
+2020-03-23 16:01:01,541 [INFO] PinOutPanel:1420 - setPackage(No Configuration,No Configuration)
+2020-03-23 16:01:01,544 [INFO] PinOutPanel:1420 - setPackage(STM32F030R8Tx,LQFP64)
+2020-03-23 16:01:02,133 [INFO] UtilMem:74 - Before build in PCC Used Memory: 736116720 Bytes (1073741824)
+2020-03-23 16:01:02,499 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/nxf46245/.stm32cubemx/plugins/power
+2020-03-23 16:01:02,561 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/nxf46245/.stm32cubemx/plugins/power
+2020-03-23 16:01:02,620 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/nxf46245/.stm32cubemx/plugins/power
+2020-03-23 16:01:02,623 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/nxf46245/.stm32cubemx/plugins/power
+2020-03-23 16:01:02,717 [INFO] UtilMem:74 - After build in PCC Used Memory: 774391784 Bytes (1073741824)
+2020-03-23 16:01:02,744 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,745 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,746 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,746 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,747 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,747 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,747 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,748 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,748 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,749 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,749 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,750 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,751 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,751 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,752 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,752 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,753 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,754 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,754 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,754 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,755 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,756 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,756 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,757 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,757 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,758 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-03-23 16:01:02,817 [INFO] OpenFileManager:294 - Restore cursor
+2020-03-23 16:01:03,112 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 806259744 Bytes (1073741824)
+2020-03-23 16:01:03,178 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 810565616 Bytes (1073741824)
+2020-03-23 16:01:03,442 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: NVIC
+2020-03-23 16:01:03,443 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: USART
+2020-03-23 16:01:03,443 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: SYS
+2020-03-23 16:01:03,443 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: GPIO
+2020-03-23 16:01:03,443 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: RCC
+2020-03-23 16:01:03,447 [INFO] CodeGenerator:603 - code generatio: config db path: C:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.0.202002181639\\db\
+2020-03-23 16:01:03,705 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\license.tmp_save
+2020-03-23 16:01:03,953 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\license.tmp
+2020-03-23 16:01:04,027 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\gpio.tmp_save
+2020-03-23 16:01:04,215 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\gpio.tmp
+2020-03-23 16:01:04,301 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-03-23 16:01:04,303 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2020-03-23 16:01:04,304 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-03-23 16:01:04,307 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2020-03-23 16:01:04,308 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-03-23 16:01:04,320 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\stm32f0xx_it.c_save
+2020-03-23 16:01:04,481 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\stm32f0xx_it.c
+2020-03-23 16:01:04,494 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\stm32f0xx_it.h_save
+2020-03-23 16:01:04,626 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\stm32f0xx_it.h
+2020-03-23 16:01:04,646 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\stm32f0xx_hal_msp.c_save
+2020-03-23 16:01:04,874 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\stm32f0xx_hal_msp.c
+2020-03-23 16:01:04,891 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\system.tmp_save
+2020-03-23 16:01:05,029 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\system.tmp
+2020-03-23 16:01:05,047 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\stm32f0xx_hal_conf.h_save
+2020-03-23 16:01:05,230 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\stm32f0xx_hal_conf.h
+2020-03-23 16:01:05,250 [WARN] IPConfigManager:2701 - IP not found : gpio
+2020-03-23 16:01:05,252 [WARN] CodeGenerator:2649 - IP not found : gpio
+2020-03-23 16:01:05,264 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\main.h_save
+2020-03-23 16:01:05,435 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\main.h
+2020-03-23 16:01:05,451 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\main.c_save
+2020-03-23 16:01:05,640 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\main.c
+2020-03-23 16:01:06,720 [INFO] ProjectBuilder:2002 - Time for Copy HAL[1] : 342mS.
+2020-03-23 16:01:06,730 [INFO] ProjectBuilder:2727 - Project Generator version: 3.7.1
+2020-03-23 16:01:07,143 [INFO] ConfigFileManager:1066 - The Die is : DIE440
+2020-03-23 16:01:42,173 [INFO] ProjectBuilder:2894 - Time for Generating toolchain IDE Files: 35443mS.
+2020-03-23 16:01:42,183 [INFO] ProjectBuilder:1878 - Time for Copy CMSIS : 9mS.
+2020-03-23 16:01:42,189 [INFO] ProjectBuilder:1878 - Time for Copy CMSIS : 0mS.
+2020-03-23 16:04:27,495 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 626210576 Bytes (1073741824)
+2020-03-23 16:04:29,742 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 633548560 Bytes (1073741824)
+2020-03-23 16:04:29,936 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 648108808 Bytes (1073741824)
+2020-03-23 16:04:30,194 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: NVIC
+2020-03-23 16:04:30,194 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: USART
+2020-03-23 16:04:30,194 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: SYS
+2020-03-23 16:04:30,195 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: GPIO
+2020-03-23 16:04:30,195 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: RCC
+2020-03-23 16:04:30,199 [INFO] CodeGenerator:603 - code generatio: config db path: C:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.0.202002181639\\db\
+2020-03-23 16:04:30,421 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\license.tmp_save
+2020-03-23 16:04:30,545 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\license.tmp
+2020-03-23 16:04:30,588 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\gpio.tmp_save
+2020-03-23 16:04:30,728 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\gpio.tmp
+2020-03-23 16:04:30,796 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-03-23 16:04:30,797 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2020-03-23 16:04:30,798 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-03-23 16:04:30,800 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2020-03-23 16:04:30,801 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-03-23 16:04:30,816 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\stm32f0xx_it.c_save
+2020-03-23 16:04:30,991 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\stm32f0xx_it.c
+2020-03-23 16:04:31,012 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\stm32f0xx_it.h_save
+2020-03-23 16:04:31,184 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\stm32f0xx_it.h
+2020-03-23 16:04:31,215 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\stm32f0xx_hal_msp.c_save
+2020-03-23 16:04:31,450 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\stm32f0xx_hal_msp.c
+2020-03-23 16:04:31,468 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\system.tmp_save
+2020-03-23 16:04:31,604 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\system.tmp
+2020-03-23 16:04:31,623 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\stm32f0xx_hal_conf.h_save
+2020-03-23 16:04:31,790 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\stm32f0xx_hal_conf.h
+2020-03-23 16:04:31,802 [WARN] IPConfigManager:2701 - IP not found : gpio
+2020-03-23 16:04:31,803 [WARN] CodeGenerator:2649 - IP not found : gpio
+2020-03-23 16:04:31,816 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\main.h_save
+2020-03-23 16:04:31,998 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\main.h
+2020-03-23 16:04:32,024 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\main.c_save
+2020-03-23 16:04:32,259 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\main.c
+2020-03-23 16:04:33,154 [INFO] ProjectBuilder:2002 - Time for Copy HAL[1] : 281mS.
+2020-03-23 16:04:33,158 [INFO] ProjectBuilder:2727 - Project Generator version: 3.7.1
+2020-03-23 16:04:33,519 [INFO] ConfigFileManager:1066 - The Die is : DIE440
+2020-03-23 16:04:36,228 [INFO] ProjectBuilder:2894 - Time for Generating toolchain IDE Files: 3070mS.
+2020-03-23 16:04:36,231 [INFO] ProjectBuilder:1878 - Time for Copy CMSIS : 2mS.
+2020-03-23 16:04:36,236 [INFO] ProjectBuilder:1878 - Time for Copy CMSIS : 0mS.
+2020-03-23 16:04:45,093 [INFO] Gpio:248 - dependency for GPIO [RCC, SYS, USART2]
+2020-03-23 16:05:40,762 [INFO] Gpio:248 - dependency for GPIO [RCC, SYS, USART2]
+2020-03-23 16:05:42,909 [INFO] ApiDbMcu:451 - Load IP Config File for FREERTOS
+2020-03-23 16:05:43,106 [ERROR] RtosPanel:515 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2020-03-23 16:05:43,217 [ERROR] RtosPanel:515 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2020-03-23 16:05:54,987 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-03-23 16:05:54,987 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-03-23 16:05:54,987 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-03-23 16:07:08,027 [INFO] EditThreadDialog:688 - RAM SIZE (in KB): 8
+2020-03-23 16:07:08,028 [INFO] EditThreadDialog:690 - RAM SIZE (in words): 2048
+2020-03-23 16:07:42,454 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-03-23 16:07:42,454 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-03-23 16:07:42,455 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-03-23 16:07:42,455 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-03-23 16:07:42,455 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-03-23 16:07:42,455 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-03-23 16:07:42,621 [ERROR] RtosPanel:515 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2020-03-23 16:07:47,059 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-03-23 16:07:47,060 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-03-23 16:07:47,060 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-03-23 16:07:47,060 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-03-23 16:07:47,060 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-03-23 16:07:47,060 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-03-23 16:07:53,428 [INFO] EditThreadDialog:688 - RAM SIZE (in KB): 8
+2020-03-23 16:07:53,428 [INFO] EditThreadDialog:690 - RAM SIZE (in words): 2048
+2020-03-23 16:08:25,006 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-03-23 16:08:25,006 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-03-23 16:08:25,006 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-03-23 16:08:25,007 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-03-23 16:08:25,007 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-03-23 16:08:25,007 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-03-23 16:08:25,007 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-03-23 16:08:25,007 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-03-23 16:08:25,008 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-03-23 16:08:54,525 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-03-23 16:08:54,526 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-03-23 16:08:54,526 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-03-23 16:08:54,526 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-03-23 16:08:54,526 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-03-23 16:08:54,526 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-03-23 16:08:54,526 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-03-23 16:08:54,526 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-03-23 16:08:54,526 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-03-23 16:09:23,478 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-03-23 16:09:23,479 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-03-23 16:09:23,479 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-03-23 16:09:23,479 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-03-23 16:09:23,479 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-03-23 16:09:23,479 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-03-23 16:09:23,479 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-03-23 16:09:23,479 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-03-23 16:09:23,479 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-03-23 16:10:03,389 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 623714936 Bytes (1073741824)
+2020-03-23 16:10:04,572 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 631581296 Bytes (1073741824)
+2020-03-23 16:10:04,734 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 654582680 Bytes (1073741824)
+2020-03-23 16:10:04,924 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: NVIC
+2020-03-23 16:10:04,924 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: FREERTOS
+2020-03-23 16:10:04,924 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: USART
+2020-03-23 16:10:04,924 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: SYS
+2020-03-23 16:10:04,924 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: GPIO
+2020-03-23 16:10:04,924 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: RCC
+2020-03-23 16:10:04,929 [INFO] CodeGenerator:603 - code generatio: config db path: C:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.0.202002181639\\db\
+2020-03-23 16:10:05,106 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\license.tmp_save
+2020-03-23 16:10:05,199 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\license.tmp
+2020-03-23 16:10:05,233 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\gpio.tmp_save
+2020-03-23 16:10:05,341 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\gpio.tmp
+2020-03-23 16:10:05,423 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-03-23 16:10:05,449 [INFO] Middleware:1103 - No code input for Bsp Dependency
+2020-03-23 16:10:05,460 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\rtos_inc.tmp_save
+2020-03-23 16:10:05,573 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\rtos_inc.tmp
+2020-03-23 16:10:05,587 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\rtos_vars.tmp_save
+2020-03-23 16:10:05,708 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\rtos_vars.tmp
+2020-03-23 16:10:05,722 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\rtos_pfp.tmp_save
+2020-03-23 16:10:05,831 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\rtos_pfp.tmp
+2020-03-23 16:10:05,842 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\rtos_obj_creat.tmp_save
+2020-03-23 16:10:05,947 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\rtos_obj_creat.tmp
+2020-03-23 16:10:05,957 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\rtos_kernelStart.tmp_save
+2020-03-23 16:10:06,101 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\rtos_kernelStart.tmp
+2020-03-23 16:10:06,114 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\rtos_default_thread.tmp_save
+2020-03-23 16:10:06,207 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\rtos_default_thread.tmp
+2020-03-23 16:10:06,219 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\rtos_threads.tmp_save
+2020-03-23 16:10:06,319 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\rtos_threads.tmp
+2020-03-23 16:10:06,331 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\FreeRTOSConfig.h_save
+2020-03-23 16:10:06,450 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\FreeRTOSConfig.h
+2020-03-23 16:10:06,462 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\freertos.c_save
+2020-03-23 16:10:06,569 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\freertos.c
+2020-03-23 16:10:06,572 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-03-23 16:10:06,573 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2020-03-23 16:10:06,573 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-03-23 16:10:06,575 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2020-03-23 16:10:06,576 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-03-23 16:10:06,586 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\stm32f0xx_it.c_save
+2020-03-23 16:10:06,705 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\stm32f0xx_it.c
+2020-03-23 16:10:06,721 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\stm32f0xx_it.h_save
+2020-03-23 16:10:06,832 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\stm32f0xx_it.h
+2020-03-23 16:10:06,854 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\stm32f0xx_hal_msp.c_save
+2020-03-23 16:10:07,035 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\stm32f0xx_hal_msp.c
+2020-03-23 16:10:07,049 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\system.tmp_save
+2020-03-23 16:10:07,143 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\MXTmpFiles\system.tmp
+2020-03-23 16:10:07,154 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\stm32f0xx_hal_timebase_tim.c_save
+2020-03-23 16:10:07,255 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\stm32f0xx_hal_timebase_tim.c
+2020-03-23 16:10:07,268 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\stm32f0xx_hal_conf.h_save
+2020-03-23 16:10:07,385 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\stm32f0xx_hal_conf.h
+2020-03-23 16:10:07,394 [WARN] IPConfigManager:2701 - IP not found : gpio
+2020-03-23 16:10:07,395 [WARN] CodeGenerator:2649 - IP not found : gpio
+2020-03-23 16:10:07,405 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\main.h_save
+2020-03-23 16:10:07,515 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Inc\main.h
+2020-03-23 16:10:07,531 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\main.c_save
+2020-03-23 16:10:07,698 [INFO] CodeEngine:206 - Generated code: C:\Users\nxf46245\Documents\MMIA\cv7\Core\Src\main.c
+2020-03-23 16:10:08,519 [INFO] ProjectBuilder:2002 - Time for Copy HAL[1] : 358mS.
+2020-03-23 16:10:08,525 [INFO] ProjectBuilder:2727 - Project Generator version: 3.7.1
+2020-03-23 16:10:08,778 [INFO] ConfigFileManager:1066 - The Die is : DIE440
+2020-03-23 16:10:10,895 [INFO] ProjectBuilder:2894 - Time for Generating toolchain IDE Files: 2370mS.
+2020-03-23 16:10:10,896 [INFO] ProjectBuilder:1878 - Time for Copy CMSIS : 1mS.
+2020-03-23 16:10:10,906 [INFO] ProjectBuilder:1878 - Time for Copy CMSIS : 0mS.

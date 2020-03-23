@@ -121,7 +121,7 @@ int main(void)
 	  if (HAL_GPIO_ReadPin(S1_GPIO_Port, S1_Pin) == 0) {
 		  state = SHOW_DS18B20;
 		  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
-		  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(LED1_GPIO_Port	, LED1_Pin, GPIO_PIN_RESET);
 	  }
 
 	  if (HAL_GPIO_ReadPin(S2_GPIO_Port, S2_Pin) == 0) {

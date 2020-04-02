@@ -46,7 +46,7 @@ TIM_HandleTypeDef htim2;
 UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
-static volatile int key = -1;
+static volatile uint8_t key = -1;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -73,11 +73,12 @@ int __io_putchar(int ch)
 int main(void)
 {
 	/* USER CODE BEGIN 1 */
-	const int kod[5] = {7, 9, 3, 2, 12};
-	static int stisknuto[5] = {0, 0, 0, 0, 0};
-	int counter, time = 0;
-	int match = 0;
-	static int delay = 0;
+	const uint8_t kod[5] = {7, 9, 3, 2, 12};
+	static uint8_t stisknuto[5] = {0, 0, 0, 0, 0};
+	uint8_t counter = 0;
+	uint32_t time = 0;
+	uint8_t match = 0;
+	static uint32_t delay = 0;
 	/* USER CODE END 1 */
 
 	/* MCU Configuration--------------------------------------------------------*/
@@ -113,42 +114,48 @@ int main(void)
 		HAL_Delay(250);
 		time = HAL_GetTick();
 
-		if ((time-delay) > 3000)
+		if ((time-delay) > 3000) // jestli nebyla stisknuta klavesa vice jak 3s, dekrementovat counter a match
 		{
 			printf("Time out\n");
-			counter = 0;
+
+			if (counter > 0)
+				counter--;
+			if (match > 0)
+				match--;
+
+			delay = HAL_GetTick(); // vynuluj delay
 		}
 
 
-		if (key != -1)
+		if (key != -1) // byla stisknuta platna klavesa
 		{
 			delay = HAL_GetTick();
 			printf("Stisknuto: %d\n", key);
 			stisknuto[counter] = key;
+
+			if (stisknuto[counter] == kod[counter]) // pokud byla stisknuta spravna klavesa, ikrementuj match
+			{
+				match++;
+			}
+
 			counter++;
 
-			if (counter >= 5)
+			if (counter > 5) // jestlize bylo zadano 5 znaku
 			{
+				if (match > 5) // jestli bylo 5 znaku spravne otevri
+				{
+					printf("Otevreno \n");
+					// rozsvit ld1 (green) na desce na 1 s
+					HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, GPIO_PIN_SET);
+					HAL_Delay(1000);
+					HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, GPIO_PIN_RESET);
+					match = 0;
+				}
 				counter = 0;
 				printf("Nuluji counter \n");
-				for (int i=0; i<5; i++)
-				{
-					if (stisknuto[i] == kod[i])
-					{
-						match++;
-						printf("Inkrementuji match \n");
-					}
-				}
+
 			}
 
-			if (match >= 5)
-			{
-				printf("Otevreno \n");
-				HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
-			}
-
-			match = 0;
-			HAL_Delay(250);
 			key = -1;
 		}
 
@@ -404,34 +411,34 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-  static int row = 0;
-  static const int keyboard[4][4] = {
-    { 1, 2, 3, 21 },
-    { 4, 5, 6, 22 },
-    { 7, 8, 9, 23 },
-    { 11, 0, 12, 24 },
-  };
+	static int row = 0;
+	static const int keyboard[4][4] = {
+			{ 1, 2, 3, 21 },
+			{ 4, 5, 6, 22 },
+			{ 7, 8, 9, 23 },
+			{ 11, 0, 12, 24 },
+	};
 
-  if (key == -1)
-  {
-    if (HAL_GPIO_ReadPin(Col1_GPIO_Port, Col1_Pin) == GPIO_PIN_RESET) key = keyboard[row][0];
-    if (HAL_GPIO_ReadPin(Col2_GPIO_Port, Col2_Pin) == GPIO_PIN_RESET) key = keyboard[row][1];
-    if (HAL_GPIO_ReadPin(Col3_GPIO_Port, Col3_Pin) == GPIO_PIN_RESET) key = keyboard[row][2];
-    if (HAL_GPIO_ReadPin(Col4_GPIO_Port, Col4_Pin) == GPIO_PIN_RESET) key = keyboard[row][3];
-  }
+	if (key == -1)
+	{
+		if (HAL_GPIO_ReadPin(Col1_GPIO_Port, Col1_Pin) == GPIO_PIN_RESET) key = keyboard[row][0];
+		if (HAL_GPIO_ReadPin(Col2_GPIO_Port, Col2_Pin) == GPIO_PIN_RESET) key = keyboard[row][1];
+		if (HAL_GPIO_ReadPin(Col3_GPIO_Port, Col3_Pin) == GPIO_PIN_RESET) key = keyboard[row][2];
+		if (HAL_GPIO_ReadPin(Col4_GPIO_Port, Col4_Pin) == GPIO_PIN_RESET) key = keyboard[row][3];
+	}
 
-  HAL_GPIO_WritePin(Row1_GPIO_Port, Row1_Pin, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(Row2_GPIO_Port, Row2_Pin, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(Row3_GPIO_Port, Row3_Pin, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(Row4_GPIO_Port, Row1_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(Row1_GPIO_Port, Row1_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(Row2_GPIO_Port, Row2_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(Row3_GPIO_Port, Row3_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(Row4_GPIO_Port, Row1_Pin, GPIO_PIN_SET);
 
-  switch (row)
-  {
-    case 0: row = 1; HAL_GPIO_WritePin(Row1_GPIO_Port, Row1_Pin, GPIO_PIN_RESET); break;
-    case 1: row = 2; HAL_GPIO_WritePin(Row2_GPIO_Port, Row2_Pin, GPIO_PIN_RESET); break;
-    case 2: row = 3; HAL_GPIO_WritePin(Row3_GPIO_Port, Row3_Pin, GPIO_PIN_RESET); break;
-    case 3: row = 0; HAL_GPIO_WritePin(Row4_GPIO_Port, Row4_Pin, GPIO_PIN_RESET); break;
-  }
+	switch (row)
+	{
+	case 0: row = 1; HAL_GPIO_WritePin(Row1_GPIO_Port, Row1_Pin, GPIO_PIN_RESET); break;
+	case 1: row = 2; HAL_GPIO_WritePin(Row2_GPIO_Port, Row2_Pin, GPIO_PIN_RESET); break;
+	case 2: row = 3; HAL_GPIO_WritePin(Row3_GPIO_Port, Row3_Pin, GPIO_PIN_RESET); break;
+	case 3: row = 0; HAL_GPIO_WritePin(Row4_GPIO_Port, Row4_Pin, GPIO_PIN_RESET); break;
+	}
 }
 /* USER CODE END 4 */
 

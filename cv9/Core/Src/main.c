@@ -1,21 +1,21 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file           : main.c
+ * @brief          : Main program body
+ ******************************************************************************
+ * @attention
+ *
+ * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
+ * All rights reserved.</center></h2>
+ *
+ * This software component is licensed by ST under BSD 3-Clause license,
+ * the "License"; You may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at:
+ *                        opensource.org/licenses/BSD-3-Clause
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
@@ -61,7 +61,8 @@ static void MX_USART3_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void step(int8_t x, int8_t y, _Bool btn) {
+void step(int8_t x, int8_t y, _Bool btn)
+{
 	uint8_t buff[5];
 	buff[0] = 0x02; // report id pro mys
 	if (btn)
@@ -78,7 +79,8 @@ void step(int8_t x, int8_t y, _Bool btn) {
 
 }
 
-void circle(int8_t radius) {
+void circle(int8_t radius)
+{
 	int8_t x, y;
 	float angle = 0.0;
 	float angle_stepsize = 0.1;
@@ -94,6 +96,44 @@ void circle(int8_t radius) {
 
 }
 
+void mouth(int8_t radius) {
+	int8_t x, y;
+	float angle = 0.0;
+	float angle_stepsize = 0.1;
+
+	while (angle < 2 * PI)
+	{
+		x = radius * cos (angle);
+		y = radius * sin (angle);
+
+		angle += angle_stepsize;
+		if (angle > 2.5 && angle < 4)
+			step(x, y, 1);
+	}
+}
+
+inline static void smile(void)
+{
+	step(0, 0, 0);
+	circle(15); // hlava
+	step(-25,0,0);
+	step(0,50,0);
+	circle(4); // oko 1
+	step(0, 0, 0);
+	step(75,0,0);
+	circle(4); // oko 2
+	step(0, 0, 0);
+	step(-40,0,0);
+	step(0, 0, 1);
+	step(0,80,0);
+	step(0, 0, 0);
+	step(40,0,0);
+	step(0, 0, 0);
+	mouth(10); // pusa
+	step(0, 0, 0);
+	step(20, 0, 1);
+	step(0, 0, 0);
+}
 /* USER CODE END 0 */
 
 /**
@@ -132,12 +172,18 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
+	while (1)
+	{
+		if(HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin))
+		{
+			//circle(10);
+			//step(10, 10, 1);
+			smile();
+		}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  }
+	}
   /* USER CODE END 3 */
 }
 
@@ -239,11 +285,11 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(USB_PowerSwitchOn_GPIO_Port, USB_PowerSwitchOn_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : USER_Btn_Pin */
-  GPIO_InitStruct.Pin = USER_Btn_Pin;
+  /*Configure GPIO pin : B1_Pin */
+  GPIO_InitStruct.Pin = B1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(USER_Btn_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : RMII_MDC_Pin RMII_RXD0_Pin RMII_RXD1_Pin */
   GPIO_InitStruct.Pin = RMII_MDC_Pin|RMII_RXD0_Pin|RMII_RXD1_Pin;
@@ -310,7 +356,7 @@ static void MX_GPIO_Init(void)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
+	/* User can add his own implementation to report the HAL error return state */
 
   /* USER CODE END Error_Handler_Debug */
 }
@@ -326,7 +372,7 @@ void Error_Handler(void)
 void assert_failed(uint8_t *file, uint32_t line)
 { 
   /* USER CODE BEGIN 6 */
-  /* User can add his own implementation to report the file name and line number,
+	/* User can add his own implementation to report the file name and line number,
      tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
   /* USER CODE END 6 */
 }

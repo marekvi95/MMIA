@@ -112,9 +112,47 @@ void mouth(int8_t radius) {
 	}
 }
 
+void keyboard(uint8_t key1, uint8_t key2)
+{
+	uint8_t buff[9];
+	buff[0] = 0x01; // report id pro klavesnici
+	buff[1] = key2;
+	buff[2] = 0;
+	buff[3] = key1;
+	buff[4] = 0;
+	buff[5] = 0;
+	buff[6] = 0;
+	buff[7] = 0;
+	buff[8] = 0;
+
+	USBD_HID_SendReport(&hUsbDeviceFS, buff, sizeof(buff));
+	HAL_Delay(3*USBD_HID_GetPollingInterval(&hUsbDeviceFS));
+
+	buff[1] = 0;
+	buff[3] = 0;
+
+	USBD_HID_SendReport(&hUsbDeviceFS, buff, sizeof(buff));
+	HAL_Delay(3*USBD_HID_GetPollingInterval(&hUsbDeviceFS));
+}
+
+/*
+ * Otevre malovani (mspaint.exe) a nakresli smajlika
+ */
 inline static void smile(void)
 {
-	step(0, 0, 0);
+    keyboard(0x15, 0x08); // Win + R
+    keyboard(0x10, 0); // m
+    keyboard(0x16, 0); // s
+    keyboard(0x13, 0); // p
+    keyboard(0x04, 0); // a
+    keyboard(0x0C, 0); // i
+    keyboard(0x11, 0); // n
+    keyboard(0x17, 0); // t
+    keyboard(0x28, 0); // Enter
+
+    HAL_Delay(300);
+
+    step(0, 0, 0);
 	circle(15); // hlava
 	step(-25,0,0);
 	step(0,50,0);
@@ -133,6 +171,8 @@ inline static void smile(void)
 	step(0, 0, 0);
 	step(20, 0, 1);
 	step(0, 0, 0);
+
+	HAL_Delay(300);
 }
 /* USER CODE END 0 */
 

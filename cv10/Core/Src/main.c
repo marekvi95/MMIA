@@ -62,6 +62,7 @@ void StartDefaultTask(void const * argument);
 /* USER CODE BEGIN PFP */
 extern void tcpecho_init(void);
 extern void telnet_init(void);
+extern void cgi_init(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -323,6 +324,7 @@ void StartDefaultTask(void const * argument)
   tcpecho_init();
   telnet_init();
   httpd_init();
+
   /* Infinite loop */
   for(;;)
   {

@@ -57,7 +57,10 @@ static void telnet_process_command(char *cmd, struct netconn *conn)
   }
 
   else if (strcasecmp(token, "STATUS") == 0) {
-    sprintf(s, "Komunikace OK\n");
+	uint8_t ld1 = HAL_GPIO_ReadPin(LD1_GPIO_Port, LD1_Pin);
+	uint8_t ld2 = HAL_GPIO_ReadPin(LD2_GPIO_Port, LD2_Pin);
+	uint8_t ld3 = HAL_GPIO_ReadPin(LD3_GPIO_Port, LD3_Pin);
+	sprintf(s, "LED1: %d \n LED2: %d \n, LED3: %d \n", ld1, ld2, ld3);
     netconn_write(conn, s, strlen(s), NETCONN_COPY);
   }
 
